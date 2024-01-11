@@ -1,3 +1,4 @@
+## Intro
 
 Eureka defined in eureka-server and runs in port `8000`
 
@@ -22,5 +23,11 @@ In case u figured out how to run mutiple Application ![image](https://github.com
 u can try to access `localhost://10010/api/hello/abc` and refresh it. This method implements Load Balance by the `gateway`.
 There is another url u can try, which is `localhost://10010/api/user/hello/abc`. This method implements Load Balance by `Feign` and it is a request from one sevice(user-service) to another service(hello-service).
 And this kind of manipulation is largely dependent on `HelloClient` defined in `user-service`. 
+
+
+## Connection with db
+![image](https://github.com/DEAN-Cherry/Spring-Cloud-Demo/assets/76607677/6b9201b4-5d4d-49d3-b6af-dd85c5996a7f)
+
+![image](https://github.com/DEAN-Cherry/Spring-Cloud-Demo/assets/76607677/cd180197-e5ff-47c5-99b6-62e18d000a2f)
 
 
