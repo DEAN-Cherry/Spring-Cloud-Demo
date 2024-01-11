@@ -1,0 +1,96 @@
+server:
+  port: 10010
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: hello-service
+            uri: lb://hello-service
+            predicates:
+              - Path=/api/hello/**
+          - id: user-service
+            uri: lb://user-service
+            predicates:
+              - Path=/api/user/**
+          - id: auth-service
+            uri: lb://auth-service
+            predicates:
+              - Path=/auth/**
+#          - id: file-service
+#            uri: lb://file-service
+#            predicates:
+#              - Path=/file/**
+#          - id: message-service
+#            uri: lb://message-service
+#            predicates:
+#              - Path=/message/**
+#          - id: notice-service
+#            uri: lb://notice-service
+#            predicates:
+#              - Path=/notice/**
+#          - id: order-service
+#            uri: lb://order-service
+#            predicates:
+#              - Path=/order/**
+#          - id: product-service
+#            uri: lb://product-service
+#            predicates:
+#              - Path=/product/**
+#          - id: shop-service
+#            uri: lb://shop-service
+#            predicates:
+#              - Path=/shop/**
+#          - id: trade-service
+#            uri: lb://trade-service
+#            predicates:
+#              - Path=/trade/**
+#          - id: wallet-service
+#            uri: lb://wallet-service
+#            predicates:
+#              - Path=/wallet/**
+#          - id: wechat-service
+#            uri: lb://wechat-service
+#            predicates:
+#              - Path=/wechat/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
+#          - id: wechatpay-service
+#            uri: lb://wechatpay-service
+#            predicates:
+#              - Path=/wechatpay/**
