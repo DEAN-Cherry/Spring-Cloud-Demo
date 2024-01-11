@@ -1,8 +1,8 @@
 ## Intro
 
-Eureka defined in eureka-server and runs in port `8000`
+Eureka is established in `eureka-server` and runs in port `8000`
 
-Gateway runs defined in `gateway` and runs in port `10010` The gateway means all the request can be access in the port of gateway, e.g. `http://localhost:10010/api/hello/abc`
+Gateway is defined in `gateway` module and runs in port `10010` The gateway means all the request can be access in the port of gateway, e.g. `http://localhost:10010/api/hello/abc`
 
 The rest are all Eureka client with different functionality and can be seen from there name.
 
